@@ -7,7 +7,6 @@
 -- these lines here.
 
 DROP DATABASE IF EXISTS tournament;
-DROP DATABASE IF EXISTS tournaments;
 
 CREATE DATABASE tournament;
 \c tournament
