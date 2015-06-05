@@ -127,12 +127,12 @@ def swissPairings():
                 lead(z.name) over (ORDER BY wins DESC) as name2, \
                 row_number() over (ORDER BY wins DESC) as rank FROM \
                 (SELECT a.pid as id, a.name as name, \
-                    coalesce(b.wins,0) as wins, \
+                coalesce(b.wins,0) as wins, \
                 coalesce(d.count_p2,0) + coalesce(c.count_p1,0) as matches \
                 FROM players as a\
                 LEFT JOIN \
                 (SELECT win, count(win) AS wins FROM matches \
-                    GROUP BY win ORDER BY wins) as b ON a.pid=b.win\
+                GROUP BY win ORDER BY wins) as b ON a.pid=b.win\
                 LEFT JOIN \
                 (SELECT p1, count(p1) as count_p1 FROM matches GROUP BY p1)\
                  as c ON a.pid=c.p1\
