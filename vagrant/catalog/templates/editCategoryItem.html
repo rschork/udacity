@@ -1,0 +1,16 @@
+
+<html>
+<body>
+<form action= "{{url_for('editCategoryItem', category_name = category_name, item_id=item.id)}}" method = 'POST'>
+
+<p>Name:</p>
+<input type = 'text' size='30' name = 'name' placeholder = '{{item.name}}'>
+<p>Description:</p>
+<input type = 'text' size='30' name = 'description' placeholder = '{{item.description}}'>
+</br>
+</br>
+<input type='submit' value='Edit'>
+</form>
+<a href= '{{url_for('specificCategory', category_name = category_name)}}'>Cancel</a>
+</body>
+</html>

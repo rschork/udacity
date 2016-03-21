@@ -1,0 +1,33 @@
+<html>
+
+<body>
+
+<h1>{{category.name}}</h1>
+
+
+{% for i in items %}
+
+<div>
+
+<p>{{i.name}}</p>
+
+<p>{{i.description}}</p>
+
+<p> {{i.ts_created}} </p>
+
+<a href='{{url_for('editCategoryItem', category_name = category.name, item_id = i.id) }}'>Edit</a>
+</br>
+<a href='{{url_for('deleteCategoryItem', category_name = category.name, item_id = i.id) }}'>Delete</a>
+
+</div>
+
+
+{% endfor %}
+
+</br>
+</br>
+<a href='{{url_for('itemCatalog') }}'>Home</a>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+
+<section>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ryan's Item Catalog</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet">
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+
+<section>
+<section>
+{% for i in categories %}
+
+<section>
+
+<p>{{i.name}}</p>
+
+<a href='{{url_for('specificCategory', category_name = i.name)}}'>Browse</a>
+
+</section>
+
+{% endfor %}
+
+</section>
+<section>
+<p>'hello from the other side'</p>
+</section>
+</section>
+
+</br>
+</br>
+<a href='{{url_for('itemCatalog') }}'>Home</a>
+
+</section>
+
+</html>

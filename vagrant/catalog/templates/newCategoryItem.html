@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1> New {{category.name}} Item </h1>
+
+<form action="{{url_for('newCategoryItem', category_name=category.name )}}" method = 'POST'>
+
+<p>Name:</p>
+
+<input type='text' size='30' name='name'>
+
+<input type='submit' value='Create'>
+
+</form>
+</br>
+<a href= '{{url_for('specificCategory', category_name = category.name)}}'>Back</a>
+</body>
+</html>
